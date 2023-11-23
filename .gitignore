@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules
+
+# Vite build output
+/dist
+
+# Cache and logs
+.cache
+.log
+
+# Environment variables file (if used)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor-specific files (optional, but commonly ignored)
+.vscode
+.idea
+
+# macOS-specific files (if working in a macOS environment)
+.DS_Store
+
+# Miscellaneous
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.pnp.js
