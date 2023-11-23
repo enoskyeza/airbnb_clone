@@ -1,12 +1,6 @@
 import React from "react"
 
-/* Challenge:
 
-- Create a Contact.js component in another file
-- Move one of the contact card divs below into that file
-- import and render 4 instances of that contact card
-    - Think ahead: what's the problem with doing it this way?
-*/
 
 function Contact() {
     return (
@@ -30,6 +24,74 @@ function Contact() {
 }
 
 export default Contact
+
+
+
+/*
+
+1. What do props help us accomplish?
+Make a component more reusable.
+
+
+2. How do you pass a prop into a component?
+<MyAwesomeHeader title="???" />
+
+
+3. Can I pass a custom prop (e.g. `blahblahblah={true}`) to a native
+   DOM element? (e.g. <div blahblahblah={true}>) Why or why not?
+No, because the JSX we use to describe native DOM elements will
+be turned into REAL DOM elements by React. And real DOM elements
+only have the properties/attributes specified in the HTML specification.
+(Which doesn't include properties like `blahblahblah`)
+
+
+4. How do I receive props in a component?
+function Navbar(props) {
+    console.log(props.blahblahblah)
+    return (
+        <header>
+            ...
+        </header>
+    )
+}
+
+
+5. What data type is `props` when the component receives it?
+An object!
+
+*/
+
+/* Challenge:
+
+- Create a Contact.js component in another file
+- Move one of the contact card divs below into that file
+- import and render 4 instances of that contact card
+    - Think ahead: what's the problem with doing it this way?
+*/
+
+
+/* Challenge 2:
+One LAST time in this course, set up a React app from scratch
+- Render an <App /> component
+    - App should be in its own file
+- App should render 4-5 <Joke /> components
+  (Joke component defined in its own file too)
+    - Each Joke should receive a "setup" prop and a "punchline" prop
+      and render those however you'd like
+- Use your favorite 2-part jokes (setup & punchline), or check
+  jokes.md file for some examples.
+
+
+
+EXTRA CREDIT:
+Some jokes are only a punchline with no setup:
+
+E.g.: "It’s hard to explain puns to kleptomaniacs because
+they always take things literally."
+
+If you don't pass in a "question" prop, how might you make it only
+show the punchline?
+*/
 
 
 /*
