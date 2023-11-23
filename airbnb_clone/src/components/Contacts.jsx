@@ -1,21 +1,21 @@
 import React from "react"
 
 
-
-function Contact() {
+function Contact(props) {
+    const {img, name, phone, email} = props
     return (
         <div className="contacts">
 
             <div className="contact-card">
-                <img src="./images/mr-whiskerson.png"/>
-                <h3>Mr. Whiskerson</h3>
+                <img src= {`../assets/${img}`} />
+                <h3>{ name }</h3>
                 <div className="info-group">
-                    <img src="./images/phone-icon.png" />
-                    <p>(212) 555-1234</p>
+                    <img src="../assets/phone-icon.png" />
+                    <p>{ phone }</p>
                 </div>
                 <div className="info-group">
-                    <img src="./images/mail-icon.png" />
-                    <p>mr.whiskaz@catnap.meow</p>
+                    <img src="../assets/mail-icon.png" />
+                    <p>{ email }</p>
                 </div>
             </div>
 
