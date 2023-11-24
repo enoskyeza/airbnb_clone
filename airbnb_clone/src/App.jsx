@@ -10,16 +10,18 @@ function App() {
   const cards = data.map((item) => {
     return (
       <Card
+        // {...item}   // Spread the item out for all properties of the object
+        key={item.id}
         img={ item.coverImg}
         rating={ item.stats.rating }
         reviewCount={item.stats.reviewCount}
         country={ item.location }
         title={ item.title }
         price={ item.price }
+        openSpots={item.openSpots}
       />
     );
   });
-
   return (
     <>
       <Navbar />
